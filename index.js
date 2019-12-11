@@ -161,8 +161,8 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  let uniqueArray = [...new Set(list)];
-  return callback(uniqueArray);
+  let dupedArray = [...new Set(list)];
+  return callback(dupedArray);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
