@@ -285,7 +285,16 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit() {
-  
+  var count = -1;
+  return () => {
+    if (count < 3) {
+      count++;
+    }
+    else {
+      count = 0;
+    }
+    return count;
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
