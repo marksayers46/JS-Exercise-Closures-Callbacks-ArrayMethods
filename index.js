@@ -161,7 +161,8 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  
+  let uniqueArray = [...new Set(list)];
+  return callback(uniqueArray);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -284,7 +285,7 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit() {
+function counterMakerWithLimit(maxValue) {
   var count = -1;
   return () => {
     if (count < 3) {
